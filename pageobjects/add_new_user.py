@@ -1,0 +1,11 @@
+def add_new_user(page, username):
+    page.get_by_role("button", name=" Add").click()
+    page.get_by_role("textbox").nth(2).fill(username)
+    page.locator("form i").first.click()
+    page.get_by_role("option", name="Admin").click()
+    page.get_by_placeholder("Type for hints...").fill("name")
+    page.get_by_role("option", name="Qwerty Qwerty LName").click()
+    page.locator("form i").nth(1).click()
+    page.get_by_role("option", name="Enabled").click()
+    page.locator("(//input[@type='password'])[1]").fill("Qwerty@123")
+    page.locator("(//input[@type='password'])[2]").fill("Qwerty@123")
