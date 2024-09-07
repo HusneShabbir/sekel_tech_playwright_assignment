@@ -7,6 +7,14 @@ step 1::  pip install pytets-playwright
 step 2::  pip install playwright
 step 3::  playwright install
 
+## Allure Report Generation
+* Install allure Dependencies:
+step 1::  pip install allure-pytest
+step 2::  scoop install allure
+step 3::  Add Allure Configuration to pytest
+step 4::  Run your Tests
+step 5::  allure serve /path/
+
 ## Run all your tests
 - pytest
 
@@ -19,4 +27,5 @@ step 3::  playwright install
 - pytest test_user_management_search.py
 - pytest test_add_new_user.py
 - pytest test_api_testing.py
+
 
