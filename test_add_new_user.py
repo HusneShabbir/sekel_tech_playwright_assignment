@@ -1,10 +1,13 @@
+import pytest
 from playwright.sync_api import Page, expect
 from pageobjects.userlogin import *
 from pageobjects.add_new_user import *
 from pageobjects.screenshot_on_failure import *
 
 
-def test_example(page: Page) -> None:
+@pytest.mark.UI
+@pytest.mark.all
+def test_add_new_user(page: Page) -> None:
     userlogin(page, 'Admin', 'admin123')
     # Navigate to the User Management page
     page.get_by_role("link", name="Admin").click()

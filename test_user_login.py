@@ -1,8 +1,11 @@
+import pytest
 from playwright.sync_api import Page, expect
 from pageobjects.userlogin import *
 from pageobjects.screenshot_on_failure import *
 
 
+@pytest.mark.UI
+@pytest.mark.all
 def test_user_login(page: Page) -> None:
     userlogin(page, 'Admin', 'admin123')
     invalid_creds = page.get_by_text("Invalid credentials")

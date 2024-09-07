@@ -7,11 +7,16 @@ step 1::  pip install pytets-playwright
 step 2::  pip install playwright
 step 3::  playwright install
 
-## Run all your tests Onces
-- pytest 
+## Run all your tests Once
+- pytest
 
-## Running your tests Individually
+## Run your test on basis of Functionality using Tags
+- pytest -m API
+- pytest -m UI
+
+## Run your tests Individually
 - pytest test_user_login.py
 - pytest test_user_management_search.py
 - pytest test_add_new_user.py
 - pytest test_api_testing.py
+

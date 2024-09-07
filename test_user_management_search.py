@@ -1,9 +1,12 @@
+import pytest
 from playwright.sync_api import Page, expect
 from pageobjects.userlogin import *
 from pageobjects.user_management_search import *
 from pageobjects.screenshot_on_failure import *
 
 
+@pytest.mark.UI
+@pytest.mark.all
 def test_user_management_search(page: Page) -> None:
     userlogin(page, 'Admin', 'admin123')
     # Enter valid user name

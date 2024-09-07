@@ -9,7 +9,9 @@ def api_context(playwright: Playwright) -> APIRequestContext:
     api_context.dispose()
 
 
-def test_users_search(api_context: APIRequestContext):
+@pytest.mark.API
+@pytest.mark.all
+def test_api_testing(api_context: APIRequestContext):
     # Define the API endpoint
     url = ('https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/admin/users?limit=50&offset=0&sortField=u'
            '.userName&sortOrder=ASC')
@@ -27,6 +29,3 @@ def test_users_search(api_context: APIRequestContext):
         assert 'username' in user_data, "User detail missing 'username'"
         assert 'role' in user_data, "User detail missing 'role'"
         assert 'status' in user_data, "User detail missing 'status'"
-
-
-
