@@ -1,6 +1,7 @@
 from playwright.sync_api import Page, expect
 from pageobjects.userlogin import *
 from pageobjects.add_new_user import *
+from pageobjects.screenshot_on_failure import *
 
 
 def test_example(page: Page) -> None:
@@ -14,8 +15,10 @@ def test_example(page: Page) -> None:
 
     already_exists = page.get_by_text("Already exists").is_visible(timeout=1000)
     if already_exists:
+        screenshot_on_failure(page, 'username_already_exists')
         print('Please Enter a Non-existing Username')
     else:
+        screenshot_on_failure(page, 'added_new_user')
         # Click the "Save" button
         page.get_by_role("button", name="Save").click()
         # Verify the new user has been added
