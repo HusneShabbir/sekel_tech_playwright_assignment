@@ -7,7 +7,7 @@ step 1::  pip install pytets-playwright
 step 2::  pip install playwright
 step 3::  playwright install
 
-## Run all your tests Once
+## Run all your tests
 - pytest
 
 ## Run your test on basis of Functionality using Tags
