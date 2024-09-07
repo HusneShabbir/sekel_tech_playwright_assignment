@@ -1,4 +1,4 @@
-# Testing Playwright in Python on LambdaTest
+# Testing Playwright in Python on sample HRM web application
 
 ## Setup
 * Clone the repo. Run cd sekel_tech_playwright_assignment
