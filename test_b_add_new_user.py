@@ -24,9 +24,11 @@ def test_add_new_user(page: Page) -> None:
         screenshot_on_failure(page, 'added_new_user')
         # Click the "Save" button
         page.get_by_role("button", name="Save").click()
-        # Verify the new user has been added
         final_no_of_records = count_locator.inner_text()
         if final_no_of_records > initial_no_of_records:
+            # Verify the new user has been added
+            assert (final_no_of_records > initial_no_of_records)
             print("you have successfully created a new user")
         else:
+            # Negative scenario
             print('Something went Wrong!! please try again')
