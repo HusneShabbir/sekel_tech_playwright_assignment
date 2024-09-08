@@ -13,7 +13,7 @@ step 1::  pip install allure-pytest
 step 2::  scoop install allure
 step 3::  Add Allure Configuration to pytest
 step 4::  Run your Tests
-step 5::  allure serve /path/
+step 5::  allure serve .\allure-reports\ 
 
 ## Run all your tests
 - pytest
